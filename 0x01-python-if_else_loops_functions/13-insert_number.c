@@ -9,25 +9,26 @@
  *
  * Return: address of the new node, or NULL
  */
+
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *current = *head;
-	listint_t *new = NULL;
+	listint_t *a = NULL;
 	listint_t *temp = NULL;
 
 	if (!head)
 		return (NULL);
 
-	new = malloc(sizeof(listint_t));
-	if (!new)
+	a = malloc(sizeof(listint_t));
+	if (!a)
 		return (NULL);
-	new->n = number;
-	new->next = NULL;
+	a->n = number;
+	a->next = NULL;
 
 	if (!*head || (*head)->n > number)
 	{
-		new->next = *head;
-		return (*head = new);
+		a->next = *head;
+		return (*head = a);
 	}
 	else
 	{
@@ -36,9 +37,9 @@ listint_t *insert_node(listint_t **head, int number)
 			temp = current;
 			current = current->next;
 		}
-		temp->next = new;
-		new->next = current;
+		temp->next = a;
+		a->next = current;
 	}
 
-	return (new);
+	return (a);
 }

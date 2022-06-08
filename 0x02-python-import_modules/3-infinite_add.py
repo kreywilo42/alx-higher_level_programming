@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    result = 0
-    for i in range(1, len(sys.argv)):
-        result += int(sys.argv[i])
-    print("{}".format(result))
+    total = 0
+    for a in range(1, len(sys.argv)):
+        total += int(sys.argv[a])
+    print("{}".format(total))
