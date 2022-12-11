@@ -1,0 +1,54 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(6, 3)
+9
+>>> add_integer(-101, -3)
+-104
+>>> add_integer(10.0, -3)
+7
+>>> add_integer(10.0, 3)
+13
+>>> add_integer(8.5, -3)
+5
+>>> add_integer(8.0, 5)
+13
+>>> add_integer(-8.0, 8)
+0
+>>> add_integer(2**2, 2)
+6
+>>> add_integer(2**2.1, 2)
+6
+>>> add_integer('holberton', 98)
+Traceback (most recent call last):
+		  ...
+TypeError: a must be an integer
+>>> add_integer(42, 'while')
+Traceback (most recent call last):
+		  ...
+TypeError: b must be an integer
+>>> add_integer('hello', 'world')
+Traceback (most recent call last):
+		...
+TypeError: a must be an integer
+>>> add_integer(True, 1)
+2
+>>> add_integer(True, False)
+1
+>>> add_integer()
+Traceback (most recent call last):  
+		...
+TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b'
+
+>>> add_integer(a, None)
+Traceback (most recent call last):  
+		...
+NameError: name 'a' is not defined
+
+>>> add_integer(None, None)
+Traceback (most recent call last):
+		...
+TypeError: a must be an integer
+>>> add_integer(42, 42, 2)
+Traceback (most recent call last):
+		...
+TypeError: add_integer() takes 2 positional arguments but 3 were given

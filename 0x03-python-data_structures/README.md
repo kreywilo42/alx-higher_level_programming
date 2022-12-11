@@ -1,1 +1,1 @@
-Python - Data Structures: Lists, Tuples
+This directory contains Data structure programs for python

@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for a in range(ord('a'), ord('z') + 1):
-    print('{:c}'.format(a), end="")
+lower = 97
+while lower <= 122:
+    print("{}".format(chr(lower)), end="")
+    lower += 1
