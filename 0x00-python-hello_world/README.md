@@ -1,1 +1,1 @@
-Python -Hello, World!
+This directory contains python and shell scripts
