@@ -1,1 +1,2 @@
-document.querySelector("header").style.color = "#FF0000"
+///JavaScript code that updates header color to red
+document.querySelector('HEADER').style.color = "#FF0000";

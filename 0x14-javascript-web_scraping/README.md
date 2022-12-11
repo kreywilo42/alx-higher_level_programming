@@ -1,1 +1,1 @@
-ALX JS web scrapping
+This directory contains source codes for web scrapping in JavaScript
