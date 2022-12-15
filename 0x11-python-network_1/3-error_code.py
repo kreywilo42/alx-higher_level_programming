@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""send a request to the url passed and display the body of the response"""
+"""Displays body of response after sending POST request with email
+while managing exceptions"""
 import urllib.request
 import sys
 

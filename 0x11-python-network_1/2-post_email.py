@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-'''displays body of response after sending POST request with email'''
+""" A script tha displays the body of a response after
+    sending a POST request with email
+"""
 import urllib.request
 import sys
 

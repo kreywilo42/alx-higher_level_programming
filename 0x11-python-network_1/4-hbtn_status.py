@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-'''fetches status of https://alx-intranet.hbtn.io/status'''
+""" A Python Script that fetches URL with the request library"""
 import requests
 
-r = requests.get('https://alx-intranet.hbtn.io/status')
-print("Body response:")
-print("\t- type: {}".format(type(r.text)))
-print("\t- content: {}".format(r.text))
+if __name__ == "__main__":
+    req = requests.get("https://intranet.hbtn.io/status")
+    t = req.text
+    print("Body response:\n\t- type: {}\n\t- content: {}".format(type(t), t))

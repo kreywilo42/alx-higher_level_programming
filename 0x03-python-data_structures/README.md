@@ -1,1 +1,1 @@
-This directory contains Data structure programs for python
+Project on Python Data Structures
