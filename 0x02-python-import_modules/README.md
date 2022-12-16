@@ -1,1 +1,1 @@
-Project on Python - import & module
+This directory contains python import module programs
