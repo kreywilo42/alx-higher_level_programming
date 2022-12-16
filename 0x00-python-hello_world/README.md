@@ -1,1 +1,1 @@
-This directory contains python and shell scripts
+Project on Higher level programming language (Python)
