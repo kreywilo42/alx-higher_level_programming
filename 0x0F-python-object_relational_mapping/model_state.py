@@ -1,21 +1,16 @@
 #!/usr/bin/python3
-"""
-A script that contains the class definition of a
-State and an instance of the declarative_base class
-"""
+"""Definition of the State class"""
 
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import String, Column, Table, Integer, DateTime, Text, MetaData
+from sqlalchemy import Column, Integer, String
 
-my_metadata = MetaData()
-Base = declarative_base(metadata=my_metadata)
+Base = declarative_base()
 
 
 class State(Base):
-    """
-    A class that represents a state with the id and name
-    atribute
-    """
+    """Class State"""
+
     __tablename__ = 'states'
-    id = Column(Integer(), unique=True, nullable=False, primary_key=True)
+    id = Column(Integer, autoincrement=True,
+                primary_key=True, nullable=False, unique=True)
     name = Column(String(128), nullable=False)
