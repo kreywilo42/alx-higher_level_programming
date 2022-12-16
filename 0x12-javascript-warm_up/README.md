@@ -1,1 +1,1 @@
-This Directory contains source files and scripts for ALX Javascript warmup prject
+JavaScript Projects at ALX-Holberton Software Engineering School

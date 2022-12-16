@@ -1,22 +1,30 @@
 #!/usr/bin/python3
-"""prints the first State object from the database hbtn_0e_6_usa"""
+"""
+A script that prints the first State object
+from the database hbtn_0e_6_usa
+"""
+import sys
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
 
 if __name__ == "__main__":
+    engine = create_engine(
+        f"mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}\
+            @localhost:3306/{sys.argv[3]}")
+    Session = sessionmaker(bind=engine)
 
-    import sys
-    from model_state import Base, State
-    from sqlalchemy import create_engine
-    from sqlalchemy.orm import Session
+    session = Session()
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(sys.argv[1], sys.argv[2],
-                                   sys.argv[3]), pool_pre_ping=True)
-    Base.metadata.create_all(engine)
+    # states = session.query(State).order_by(State.id).all()
+    # for state in states:
+    #   if "a" in state.name:
+    #     print("f{state.id}: {state.name}")
+    #  NOTE: This approach is not effective enough as you don't need to query
+    # all objects
+    # from the database before extracting the first item
 
-    session = Session(engine)
-    first = session.query(State).order_by(State.id).first()
-    if first:
-        print("{}: {}".format(first.id, first.name))
-    else:
-        print("Nothing")
-    session.close()
+    first_state = session.query(State).order_by(State.id).first()
+    print(
+        "Nothing" if not first_state else "{}: {}".format(
+            first_state.id, first_state.name))

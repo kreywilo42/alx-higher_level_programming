@@ -1,1 +1,1 @@
-This directory contains files for the concept of Object Realational Mapping in python, teaching SQlAlchemy and MySQLdb Module
+Project for Object Relational Mapping with Python and SQL
